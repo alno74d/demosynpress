@@ -1,0 +1,34 @@
+{
+  "name": "@examples/metamask",
+  "version": "0.0.11",
+  "private": true,
+  "homepage": "https://synpress.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Synthetixio/synpress.git"
+  },
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build:cache": "synpress",
+    "build:cache:force": "synpress --force",
+    "build:cache:headless": "synpress --headless",
+    "serve:test-dapp": "serve node_modules/@metamask/test-dapp/dist -p 9999",
+    "test:playwright:headful": "playwright test",
+    "test:playwright:headless": "HEADLESS=true playwright test --project firefox",
+    "test:playwright:headless:ui": "HEADLESS=true playwright test --ui"
+  },
+  "dependencies": {
+    "@playwright/test": "1.48.2",
+    "@synthetixio/synpress": "4.0.10",
+    "dotenv": "16.4.2"
+  },
+  "devDependencies": {
+    "@metamask/test-dapp": "8.1.0",
+    "@synthetixio/synpress-tsconfig": "0.0.11",
+    "@types/node": "20.11.17",
+    "serve": "14.2.1",
+    "typescript": "5.3.3"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}
